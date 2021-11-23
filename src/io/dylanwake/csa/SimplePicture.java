@@ -211,6 +211,11 @@ public class SimplePicture implements DigitalPicture {
         return bufferedImage;
     }
 
+    public void setBufferedImage(BufferedImage img) {
+        this.bufferedImage = img;
+    }
+
+
     /**
      * Method to get a graphics object for this picture to use to draw on
      *

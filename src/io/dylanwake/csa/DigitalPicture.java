@@ -28,6 +28,8 @@ public interface DigitalPicture {
 
     BufferedImage getBufferedImage(); // get the buffered image
 
+    void setBufferedImage(BufferedImage img);
+
     int getBasicPixel(int x, int y); // get the pixel information as an int
 
     void setBasicPixel(int x, int y, int rgb); // set the pixel information

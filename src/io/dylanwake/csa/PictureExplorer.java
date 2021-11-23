@@ -1,5 +1,7 @@
 package io.dylanwake.csa;
 
+import io.dylanwake.conv.EdgeDetection;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -177,7 +179,9 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
      * Test Main.  It will explore the beach
      */
     public static void main(String[] args) {
-        Picture pix = new Picture("dependency\\Frisk0.jpg");
+        Picture pix = new Picture("dependency\\test2.jpg");
+        BufferedImage proc = pix.getBufferedImage();
+        pix.setBufferedImage(EdgeDetection.convDetector(proc));
         pix.explore();
     }
 
